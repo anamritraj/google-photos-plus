@@ -1,0 +1,38 @@
+body {
+  width: 500px;
+  background: #fff;
+}
+
+hr {
+  border: 1px solid #e4e4e4;
+  border-top: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.muted-text {
+  color: #8c8b8b;
+}
+
+.main-content {
+  padding: 10px;
+}
+
+.header {
+  text-align: center;
+}
+
+.header img {
+  width: 30px;
+}
+.header span {
+  font-size: 27px;
+}
+.main-content .goto-text {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 0px;
+  color: #4c4b4b;
+}
