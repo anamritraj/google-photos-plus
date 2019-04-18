@@ -4,10 +4,16 @@ document.addEventListener("DOMContentLoaded", function() {
   //     document.getElementById("help-text").hidden = true;
   //   }
   // });
-
-  chrome.storage.sync.get(["isPhotosPage"], function(result) {
-    if (result.isPhotosPage) {
-      document.getElementById("help-text").hidden = true;
-    }
-  });
+  // chrome.tabs.query({ currentWindow: true, active: true }, function(tabs) {
+  //   console.log(tabs);
+  //   chrome.tabs.onUpdated.addListener((tabs, changeInfo, tab) => {
+  //     console.log(tabId);
+  //     console.log(changeInfo);
+  //   });
+  // });
+  // chrome.storage.sync.get(["isPhotosPage"], function(result) {
+  //   if (result.isPhotosPage) {
+  //     document.getElementById("help-text").hidden = true;
+  //   }
+  // });
 });
