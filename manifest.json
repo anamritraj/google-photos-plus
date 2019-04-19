@@ -5,7 +5,8 @@
   "content_scripts": [
     {
       "matches": ["*://photos.google.com/*"],
-      "js": ["content.js"]
+      "js": ["content.js"],
+      "css": ["content.css"]
     }
   ],
   "browser_action": {
