@@ -20,10 +20,19 @@ const processPhotoElements = photos => {
   });
 };
 
-const addDownloadButton = photo => {
-  var div = document.createElement("div");
-  div.className = "download-button";
+const handleDownloadIconClick = (event, photoURL) => {
+  event.preventDefault();
+  chrome.runtime.sendMessage({ photoURL: photoURL });
+};
 
+const addDownloadButton = photo => {
+  const photoURL = photo.attributes["data-latest-bg"].nodeValue;
+
+  var div = document.createElement("a");
+  div.className = "download-button";
+  div.addEventListener("click", event =>
+    handleDownloadIconClick(event, photoURL)
+  );
   div.innerHTML = `<svg width="20" height="20" viewBox="0 0 490 490">
      <path d="M467.083,318.627c-5.324-5.328-11.8-7.994-19.41-7.994H315.195l-38.828,38.827c-11.04,10.657-23.982,15.988-38.828,15.988
        c-14.843,0-27.789-5.324-38.828-15.988l-38.543-38.827H27.408c-7.612,0-14.083,2.669-19.414,7.994
@@ -44,4 +53,4 @@ const addDownloadButton = photo => {
   photo.parentElement.parentElement.appendChild(div);
 };
 
-getAllThePhotoElements();
+setTimeout(getAllThePhotoElements, 3000);

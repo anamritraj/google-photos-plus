@@ -9,9 +9,13 @@
       "css": ["content.css"]
     }
   ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
   "browser_action": {
     "default_popup": "popup.html",
     "default_title": "Photos+"
   },
-  "permissions": ["storage"]
+  "permissions": ["storage", "downloads"]
 }
