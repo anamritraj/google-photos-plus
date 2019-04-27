@@ -41,6 +41,6 @@ I do not own the logo used for this project. They are respective trademarks and 
 
 ## Meta
 
-Anand – [@anamritraj](https://twitter.com/anamritraj) | [anandamritraj.in](anandamritraj.in) 
+Anand – [@anamritraj](https://twitter.com/anamritraj) | [https://anandamritraj.in](anandamritraj.in) 
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
