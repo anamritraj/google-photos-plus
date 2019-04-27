@@ -5,6 +5,7 @@
   "icons": { "16": "icon-16.png", "48": "icon-48.png", "128": "icon-128.png" },
   "homepage_url": "https://github.com/anamritraj/google-photos-plus",
   "author": "anamritraj",
+  "description": "An extension that allows you to download your photos stored using the Google Photos app in a better quality than default",
   "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
   "content_scripts": [
     {
