@@ -1,12 +1,10 @@
-const getAllThePhotoElements = () => {
-  let photos = document.querySelectorAll(
-    "div div div c-wiz div div div div div div a > div"
-  );
+const getAllThePhotoElements = selector => {
+  let photos = document.querySelectorAll(selector);
 
   // Its possible that the photos are not rendered when this script is injected in the browser.
   // If thats the case we are going to try after 1 second.
   if (photos.length <= 0) {
-    setTimeout(getAllThePhotoElements, 1000);
+    setTimeout(() => getAllThePhotoElements(selector), 1000);
   } else {
     // Once we see that there are some elements on the page, we are ready to process the photos.
     processPhotoElements(photos);
@@ -65,10 +63,16 @@ const addDownloadButton = photo => {
   photo.parentElement.parentElement.appendChild(div);
 };
 
+let selector = "div div div c-wiz div div div div div div a > div";
+
+if (window.location.pathname === "/trash") {
+  selector = "div div div c-wiz div div div  a > div";
+}
+
 // This is for the first time the page loads. It waits for 3 seconds to allow the page to completely render photos.
 // Even then if the photos are not there, it will try after every 1 second.
-setTimeout(getAllThePhotoElements, 3000);
+setTimeout(() => getAllThePhotoElements(selector), 3000);
 
 // This function listens to the user-scroll event and calls the getAllThePhotoElements method
 // when the user stops scrolling for 500ms.
-window.onmousewheel = debounce(getAllThePhotoElements, 500);
+window.onmousewheel = debounce(() => getAllThePhotoElements(selector), 500);
