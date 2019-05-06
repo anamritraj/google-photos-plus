@@ -1,4 +1,4 @@
-# Google Photos Plus
+# Google Photos Plus [(Add to chrome)](https://chrome.google.com/webstore/detail/photos+/iaiacmkllonoabnoaniipnieojefgblh?hl=en-GB&gl=IN)
 A chrome extension that allows you to download photos from [Google Photos](https://photos.google.com) in better quality than the default download option.
 
 
